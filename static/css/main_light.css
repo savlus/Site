@@ -1,0 +1,255 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #171A21;
+    background: #F4F6FA;
+}
+
+/*  Блок: nav  */
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    background: #E9EDF3;
+}
+.nav__left {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.nav__logo {
+    display: block;
+}
+.nav__image {
+    display: block;
+    height: 40px;
+}
+.nav__right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nav__element {
+    padding: 8px 12px;
+    color: #171A21;
+    text-decoration: none;
+}
+.nav__element:hover {
+    color: #82b0ff;
+}
+
+/*  Блок: infographic  */
+.infographic {
+    display: grid;
+    gap: 16px;
+    padding: 32px 16px;
+}
+.infographic__title {
+    margin: 0;
+    font-size: 24px;
+}
+.infographic__item {
+    padding: 24px;
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+.infographic__heading {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+.infographic__text {
+    margin: 0;
+    color: #667085;
+}
+
+/*  Блок: games  */
+.games {
+    padding: 32px 16px;
+    background: #E9EDF3;
+}
+.games__container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.games__title {
+    margin: 0 0 24px;
+    font-size: 24px;
+}
+.games__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.games__item {
+    display: flex;
+}
+
+/*  Блок: game-card  */
+.game-card {
+    width: 100%;
+    overflow: hidden;
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+.game-card__image {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.game-card__body {
+    padding: 16px;
+}
+.game-card__title {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+.game-card__genre {
+    margin: 0 0 4px;
+    font-size: 14px;
+    color: #4C8DFF;
+}
+.game-card__developer {
+    margin: 0 0 12px;
+    font-size: 14px;
+    color: #667085;
+}
+.game-card__rating {
+    margin-bottom: 12px;
+}
+.game-card__price {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/*  Блок: rating  */
+.rating {
+    display: flex;
+}
+.rating__star {
+    font-size: 22px;
+    color: ##3A4152;
+}
+.rating__star--filled {
+    color: #FFB400;
+}
+
+/*  Блок: footer  */
+.footer {
+    padding: 24px 16px;
+    background: #F4F6FA;
+}
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer__email {
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: #171A21;
+    text-decoration: none;
+}
+.footer__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer__item {
+    margin: 0 12px;
+}
+.footer__link {
+    color: #667085;
+    text-decoration: none;
+}
+.footer__link:hover {
+    color: #171A21;
+}
+
+/* ПЛАНШЕТ от 768px */
+@media (min-width: 768px) {
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 16px 32px;
+    }
+    .nav__left {
+        margin-bottom: 0;
+    }
+    .nav__image {
+        height: 48px;
+    }
+
+    .infographic {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 40px 32px;
+    }
+    .infographic__title {
+        grid-column: 1 / 4;
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .games {
+        padding: 40px 32px;
+    }
+    .games__title {
+        text-align: center;
+        font-size: 32px;
+    }
+    .games__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .footer {
+        padding: 24px 32px;
+    }
+    .footer__container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footer__email {
+        margin-bottom: 0;
+    }
+}
+
+/* ДЕСКТОП от 1200 */
+@media (min-width: 1200px) {
+    .nav,
+    .infographic,
+    .games,
+    .footer {
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+    .infographic {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: start;
+    }
+    .infographic__title {
+        grid-column: auto;
+        text-align: left;
+        font-size: 36px;
+    }
+
+    .games__title {
+        text-align: left;
+        font-size: 36px;
+    }
+    .games__list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
